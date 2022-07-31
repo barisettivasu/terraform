@@ -1,0 +1,49 @@
+IN UBUNTU EC2 INSTANCE::
+-------------------------
+
+wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+
+IN AMAZON-LINUX EC2 INSTANCE::
+-------------------------------
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
+
+IN CENTOS/REDHAT EC2 INSTANCE::
+--------------------------------
+
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install terraform
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ IN WINDOWS OS(WINDOWS9/10/11)/ UBUNTU TERMINAL::
+ -------------------------------------------------
+terraform download 
+macOS   Amd64   Arm64
+Windows  386    Amd64
+Linux     386    Amd64  Arm   Arm64
+FreeBSD   386   Amd64  Arm
+OpenBSD   386   Amd64
+Solaris       Amd64
+
+If you want to install terraform in gitbash or cmd promt:::
+-------------------------------------------------------------
+under the windows packages download .exe file(terraform).and unzip the file (extract the file) and move any one directory.
+here select and copy this path & add this path in envirnment variables(in path option)--> then ok
+checking the command in gitbash and cmnd promt terminal (terraform -version)
+If you want to install in ubuntu terminal:::
+--------------------------------------------
+Goto ubuntu terminal and become a root user(sudo su -)
+under the linux packages download the file (terraform) and unzip the file then move to /usr/local/bin
+-->wget "terraform linux link"
+-->ls(shows zip file)
+-->unzip "zip file name"
+-->ls(shows here files and zip file also)
+-->echo $PATH (shows paths here)
+-->mv terraform-files(unzip-files) /user/local/bin
+and finally check the terraform -version  in ubuntu terminal
