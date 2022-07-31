@@ -47,3 +47,8 @@ under the linux packages download the file (terraform) and unzip the file then m
 -->echo $PATH (shows paths here)
 -->mv terraform-files(unzip-files) /user/local/bin
 and finally check the terraform -version  in ubuntu terminal
+
+
+BY USING VISUAL STUDIO CODE::
+------------------------------
+by using this tool you can create all files in particular directory also(in local memory)
